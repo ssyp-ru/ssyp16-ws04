@@ -1,0 +1,66 @@
+Here, the storage format is explained.
+-----MONSTER DESCRIPTIONS-----
+First, let me explain how a monster_description is stored using a rat as an example.
+
+r rat 10 10 50 5 1
+
+Put simply, we just list all the things in the monster_descr structure one by one using spaces as separators.
+
+i.e. generally it would look like this:
+(pic) (name) (max_hp) (dodge) (max_roll) (max_dmg) (min_dmg)
+
+
+now, let's use (descriptions) as a sample for a description.
+
+-----LEVELS-----
+Levels are stored in the following format:
+10 6 
+##########
+###r..<###
+###..r.###
+###....###
+###.>..###
+##########
+
+Or, generally:
+(width) (height)
+(map)
+
+
+-----DUNGEON(S)-----
+Finally, the dungeons are stored as follows:
+DUNGEON
+DESCRITPIONS N
+(descritpion) xN
+
+LEVELS M
+(level)
+
+(level) 
+...
+
+Example:
+DUNGEON
+DESCRIPTIONS 2
+r rat 10 10 50 5 1
+d dultsev 100 1000 1000 1000 999
+
+LEVELS 2
+10 6
+##########
+###r..<###
+###..r.###
+###....###
+###.>..###
+##########
+
+10 6
+##########
+##..<..###
+##.....###
+##.....###
+##...d.###
+##########
+
+Where the symbols d and r are dultsevs and rats should be generated on the level monster map (or layer).
+

@@ -1,0 +1,318 @@
+Continuing.
+
+Watchpoint 2 deleted because the program has left the block in
+which its expression is valid.
+0x00000000004028ab in build_dungeon (descrs=0x63e860, descr_num=3, depth=5) at dungeon_gen.c:368
+368			level_inner* levin = build_level_inner(100, 100, 10, 7, 4);
+369			d->lvls[i] = build_level(levin, descrs, descr_num);
+370			for (j = 0; j < levin->chunkX; j++) {
+$1 = (list *) 0x641d50
+There is no member named tmp.
+$2 = (room *) 0x641d30
+$3 = {x = 11, y = 71}
+There is no member named next.
+$4 = {x = 21, y = 71}
+$5 = {x = 11, y = 81}
+There is no member named nextdata.
+$6 = {x = 21, y = 81}
+Cannot access memory at address 0x0
+Continuing.
+
+Breakpoint 1, build_level_inner (mapX=100, mapY=100, chunksize=10, minroom=7, room_number=4) at dungeon_gen.c:214
+214		l = malloc(sizeof(level_inner));
+Continuing.
+
+Program received signal SIGSEGV, Segmentation fault.
+0x0000000000402503 in add_stairs (l=0x659060, levin=0x63e9e0) at dungeon_gen.c:308
+308		l->map[up.x][up.y] = '<';
+The program being debugged has been started already.
+Start it from the beginning? (y or n) Starting program: /home/sergey/ssyp-rep/test 
+
+Breakpoint 1, build_level_inner (mapX=100, mapY=100, chunksize=10, minroom=7, room_number=4) at dungeon_gen.c:214
+214		l = malloc(sizeof(level_inner));
+Continuing.
+
+Breakpoint 1, build_level_inner (mapX=100, mapY=100, chunksize=10, minroom=7, room_number=4) at dungeon_gen.c:214
+214		l = malloc(sizeof(level_inner));
+215		l->map = malloc(sizeof(char*)*mapX);
+216		for (i = 0; i < mapX; i++) {
+217			l->map[i] = malloc(sizeof(char)*mapY);
+216		for (i = 0; i < mapX; i++) {
+217			l->map[i] = malloc(sizeof(char)*mapY);
+Continuing.
+
+Program received signal SIGSEGV, Segmentation fault.
+0x0000000000402503 in add_stairs (l=0x659060, levin=0x63e9e0) at dungeon_gen.c:308
+308		l->map[up.x][up.y] = '<';
+The program being debugged has been started already.
+Start it from the beginning? (y or n) Starting program: /home/sergey/ssyp-rep/test 
+
+Breakpoint 1, build_level_inner (mapX=100, mapY=100, chunksize=10, minroom=7, room_number=4) at dungeon_gen.c:214
+214		l = malloc(sizeof(level_inner));
+Continuing.
+
+Breakpoint 1, build_level_inner (mapX=100, mapY=100, chunksize=10, minroom=7, room_number=4) at dungeon_gen.c:214
+214		l = malloc(sizeof(level_inner));
+Hardware watchpoint 3: l
+Continuing.
+Hardware watchpoint 3: l
+
+Old value = (level_inner *) 0x400cf0 <_start>
+New value = (level_inner *) 0x63e9e0
+build_level_inner (mapX=100, mapY=100, chunksize=10, minroom=7, room_number=4) at dungeon_gen.c:215
+215		l->map = malloc(sizeof(char*)*mapX);
+216		for (i = 0; i < mapX; i++) {
+Continuing.
+
+Watchpoint 3 deleted because the program has left the block in
+which its expression is valid.
+0x00000000004028ab in build_dungeon (descrs=0x63e860, descr_num=3, depth=5) at dungeon_gen.c:368
+368			level_inner* levin = build_level_inner(100, 100, 10, 7, 4);
+369			d->lvls[i] = build_level(levin, descrs, descr_num);
+$7 = (list *) 0x641d50
+$8 = {x = 6561200, y = 0}
+$9 = {x = 6561264, y = 0}
+$10 = {x = 1, y = 61}
+$11 = {x = 1, y = 51}
+The program being debugged has been started already.
+Start it from the beginning? (y or n) Starting program: /home/sergey/ssyp-rep/test 
+
+Breakpoint 1, build_level_inner (mapX=100, mapY=100, chunksize=10, minroom=7, room_number=4) at dungeon_gen.c:214
+214		l = malloc(sizeof(level_inner));
+Continuing.
+
+Breakpoint 1, build_level_inner (mapX=100, mapY=100, chunksize=10, minroom=7, room_number=4) at dungeon_gen.c:214
+214		l = malloc(sizeof(level_inner));
+215		l->map = malloc(sizeof(char*)*mapX);
+216		for (i = 0; i < mapX; i++) {
+217			l->map[i] = malloc(sizeof(char)*mapY);
+Breakpoint 4 at 0x4020af: file dungeon_gen.c, line 219.
+Continuing.
+
+Breakpoint 4, build_level_inner (mapX=100, mapY=100, chunksize=10, minroom=7, room_number=4) at dungeon_gen.c:219
+219		for (i = 0; i < mapX; i++) { //fills map squares with '#'
+Breakpoint 5 at 0x4020c1: file dungeon_gen.c, line 221.
+Continuing.
+
+Breakpoint 5, build_level_inner (mapX=100, mapY=100, chunksize=10, minroom=7, room_number=4) at dungeon_gen.c:221
+221				l->map[i][j] = '#';
+Breakpoint 6 at 0x4020fc: file dungeon_gen.c, line 222.
+Continuing.
+
+Breakpoint 5, build_level_inner (mapX=100, mapY=100, chunksize=10, minroom=7, room_number=4) at dungeon_gen.c:221
+221				l->map[i][j] = '#';
+Continuing.
+
+Breakpoint 5, build_level_inner (mapX=100, mapY=100, chunksize=10, minroom=7, room_number=4) at dungeon_gen.c:221
+221				l->map[i][j] = '#';
+Continuing.
+
+Breakpoint 6, build_level_inner (mapX=100, mapY=100, chunksize=10, minroom=7, room_number=4) at dungeon_gen.c:226
+226		l->chunkX = mapX / chunksize;
+227		l->chunkY = mapY / chunksize;
+228		l->chunksize = chunksize;
+230		l->rooms = malloc(sizeof(room**)*l->chunkX);
+231		for (i=0; i < l->chunkX; i++) {
+232			l->rooms[i] = malloc(sizeof(room*)*l->chunkY);
+231		for (i=0; i < l->chunkX; i++) {
+Breakpoint 7 at 0x40218d: file dungeon_gen.c, line 233.
+Continuing.
+
+Breakpoint 7, build_level_inner (mapX=100, mapY=100, chunksize=10, minroom=7, room_number=4) at dungeon_gen.c:234
+234		for (i=0; i < (l->chunkX); i++) { // fiils array of rooms with NULLs
+Continuing.
+
+Program received signal SIGSEGV, Segmentation fault.
+0x0000000000402503 in add_stairs (l=0x659060, levin=0x63e9e0) at dungeon_gen.c:308
+308		l->map[up.x][up.y] = '<';
+The program being debugged has been started already.
+Start it from the beginning? (y or n) Starting program: /home/sergey/ssyp-rep/test 
+
+Breakpoint 1, build_level_inner (mapX=100, mapY=100, chunksize=10, minroom=7, room_number=4) at dungeon_gen.c:214
+214		l = malloc(sizeof(level_inner));
+Continuing.
+
+Breakpoint 4, build_level_inner (mapX=100, mapY=100, chunksize=10, minroom=7, room_number=4) at dungeon_gen.c:219
+219		for (i = 0; i < mapX; i++) { //fills map squares with '#'
+Continuing.
+
+Breakpoint 6, build_level_inner (mapX=100, mapY=100, chunksize=10, minroom=7, room_number=4) at dungeon_gen.c:226
+226		l->chunkX = mapX / chunksize;
+Continuing.
+
+Breakpoint 7, build_level_inner (mapX=100, mapY=100, chunksize=10, minroom=7, room_number=4) at dungeon_gen.c:234
+234		for (i=0; i < (l->chunkX); i++) { // fiils array of rooms with NULLs
+Continuing.
+
+Breakpoint 1, build_level_inner (mapX=100, mapY=100, chunksize=10, minroom=7, room_number=4) at dungeon_gen.c:214
+214		l = malloc(sizeof(level_inner));
+Continuing.
+
+Breakpoint 4, build_level_inner (mapX=100, mapY=100, chunksize=10, minroom=7, room_number=4) at dungeon_gen.c:219
+219		for (i = 0; i < mapX; i++) { //fills map squares with '#'
+Continuing.
+
+Breakpoint 6, build_level_inner (mapX=100, mapY=100, chunksize=10, minroom=7, room_number=4) at dungeon_gen.c:226
+226		l->chunkX = mapX / chunksize;
+Continuing.
+
+Breakpoint 7, build_level_inner (mapX=100, mapY=100, chunksize=10, minroom=7, room_number=4) at dungeon_gen.c:234
+234		for (i=0; i < (l->chunkX); i++) { // fiils array of rooms with NULLs
+235			for (j=1; j<=l->chunkY; j++) {
+236				l->rooms[i][j] = NULL;
+235			for (j=1; j<=l->chunkY; j++) {
+236				l->rooms[i][j] = NULL;
+235			for (j=1; j<=l->chunkY; j++) {
+236				l->rooms[i][j] = NULL;
+235			for (j=1; j<=l->chunkY; j++) {
+236				l->rooms[i][j] = NULL;
+235			for (j=1; j<=l->chunkY; j++) {
+236				l->rooms[i][j] = NULL;
+235			for (j=1; j<=l->chunkY; j++) {
+236				l->rooms[i][j] = NULL;
+235			for (j=1; j<=l->chunkY; j++) {
+236				l->rooms[i][j] = NULL;
+235			for (j=1; j<=l->chunkY; j++) {
+236				l->rooms[i][j] = NULL;
+235			for (j=1; j<=l->chunkY; j++) {
+236				l->rooms[i][j] = NULL;
+235			for (j=1; j<=l->chunkY; j++) {
+236				l->rooms[i][j] = NULL;
+235			for (j=1; j<=l->chunkY; j++) {
+234		for (i=0; i < (l->chunkX); i++) { // fiils array of rooms with NULLs
+235			for (j=1; j<=l->chunkY; j++) {
+236				l->rooms[i][j] = NULL;
+Breakpoint 8 at 0x4021eb: file dungeon_gen.c, line 237.
+Continuing.
+
+Breakpoint 8, build_level_inner (mapX=100, mapY=100, chunksize=10, minroom=7, room_number=4) at dungeon_gen.c:240
+240		l->minroom = minroom;
+241		l->mapX = mapX;
+242		l->mapY = mapY;
+243		l->rlist_len = 0;
+247		x = rand_int_range(0, l->chunkX-1); // Choosing the first chunk
+248		y = rand_int_range(0, l->chunkY-1);
+250		current.x = x;
+251		current.y = y;
+252		dig_room(l, current.x, current.y);
+254		while (l->rlist_len < room_number) { 
+255			int start_num = rand() % l->rlist_len;
+$12 = (list *) 0x641d50
+$13 = (room *) 0x641d30
+$14 = {x = 0, y = 0}
+$15 = {x = 18, y = 78}
+Hardware watchpoint 9: l->rlist->data->tl
+Hardware watchpoint 10: l->rlist->data->br
+Continuing.
+Warning:
+Could not insert hardware watchpoint 9.
+Could not insert hardware breakpoints:
+You may have requested too many hardware breakpoints/watchpoints.
+
+Delete all breakpoints? (y or n) Continuing.
+
+Program received signal SIGSEGV, Segmentation fault.
+0x0000000000402503 in add_stairs (l=0x659060, levin=0x63e9e0) at dungeon_gen.c:308
+308		l->map[up.x][up.y] = '<';
+Breakpoint 11 at 0x40204a: file dungeon_gen.c, line 214.
+The program being debugged has been started already.
+Start it from the beginning? (y or n) Starting program: /home/sergey/ssyp-rep/test 
+
+Breakpoint 11, build_level_inner (mapX=100, mapY=100, chunksize=10, minroom=7, room_number=4) at dungeon_gen.c:214
+214		l = malloc(sizeof(level_inner));
+Breakpoint 12 at 0x40218d: file dungeon_gen.c, line 233.
+Continuing.
+
+Breakpoint 12, build_level_inner (mapX=100, mapY=100, chunksize=10, minroom=7, room_number=4) at dungeon_gen.c:234
+234		for (i=0; i < (l->chunkX); i++) { // fiils array of rooms with NULLs
+Breakpoint 13 at 0x40219f: file dungeon_gen.c, line 236.
+Continuing.
+
+Breakpoint 13, build_level_inner (mapX=100, mapY=100, chunksize=10, minroom=7, room_number=4) at dungeon_gen.c:236
+236				l->rooms[i][j] = NULL;
+Breakpoint 14 at 0x4021eb: file dungeon_gen.c, line 238.
+Continuing.
+
+Breakpoint 13, build_level_inner (mapX=100, mapY=100, chunksize=10, minroom=7, room_number=4) at dungeon_gen.c:236
+236				l->rooms[i][j] = NULL;
+Continuing.
+
+Breakpoint 14, build_level_inner (mapX=100, mapY=100, chunksize=10, minroom=7, room_number=4) at dungeon_gen.c:240
+240		l->minroom = minroom;
+241		l->mapX = mapX;
+242		l->mapY = mapY;
+243		l->rlist_len = 0;
+247		x = rand_int_range(0, l->chunkX-1); // Choosing the first chunk
+248		y = rand_int_range(0, l->chunkY-1);
+250		current.x = x;
+Hardware watchpoint 15: l->rlist
+251		current.y = y;
+Hardware watchpoint 16: l->rlist->data
+252		dig_room(l, current.x, current.y);
+Hardware watchpoint 17: l->rlist->data->tl
+Hardware watchpoint 15: l->rlist
+
+Old value = (list *) 0x0
+New value = (list *) 0x641d50
+Hardware watchpoint 16: l->rlist->data
+
+Old value = <unreadable>
+New value = (room *) 0x641d30
+Hardware watchpoint 17: l->rlist->data->tl
+
+Old value = <unreadable>
+New value = {x = 11, y = 71}
+dig_room (l=0x63e9e0, x=1, y=7) at dungeon_gen.c:95
+95			l->rlist_len++;
+Continuing.
+
+Watchpoint 15 deleted because the program has left the block in
+which its expression is valid.
+
+Watchpoint 16 deleted because the program has left the block in
+which its expression is valid.
+
+Watchpoint 17 deleted because the program has left the block in
+which its expression is valid.
+0x00000000004028ab in build_dungeon (descrs=0x63e860, descr_num=3, depth=5) at dungeon_gen.c:368
+368			level_inner* levin = build_level_inner(100, 100, 10, 7, 4);
+Continuing.
+
+Breakpoint 11, build_level_inner (mapX=100, mapY=100, chunksize=10, minroom=7, room_number=4) at dungeon_gen.c:214
+214		l = malloc(sizeof(level_inner));
+Continuing.
+
+Breakpoint 12, build_level_inner (mapX=100, mapY=100, chunksize=10, minroom=7, room_number=4) at dungeon_gen.c:234
+234		for (i=0; i < (l->chunkX); i++) { // fiils array of rooms with NULLs
+Continuing.
+
+Breakpoint 14, build_level_inner (mapX=100, mapY=100, chunksize=10, minroom=7, room_number=4) at dungeon_gen.c:240
+240		l->minroom = minroom;
+Hardware watchpoint 18: l->rlist
+241		l->mapX = mapX;
+Hardware watchpoint 19: l->rlist->data
+242		l->mapY = mapY;
+Hardware watchpoint 20: l->rlist->data->tl
+243		l->rlist_len = 0;
+Continuing.
+Hardware watchpoint 20: l->rlist->data->tl
+
+Old value = {x = 0, y = 0}
+New value = {x = 6561200, y = 0}
+createlist (data=0x641db0) at dungeon_gen.c:8
+8		head -> next = NULL;
+9		return head;
+10	} 
+addtoend (data=0x641db0, old=0x641d50) at dungeon_gen.c:23
+23		return old;
+24	} 
+dig_room (l=0x63e9e0, x=0, y=6) at dungeon_gen.c:91
+91			l->rlist_len++; 
+$16 = (room *) 0x641db0
+$17 = (room *) 0x641d30
+$18 = (room *) 0x641d30
+A debugging session is active.
+
+	Inferior 1 [process 6116] will be killed.
+
+Quit anyway? (y or n) 
